@@ -1,7 +1,8 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import HomeScreen from '@/components/HomeScreen';
-import HelloTest from '@/components/HelloTest';
+import FighterCard from '@/components/FighterCard';
+import TitleHolders from '@/components/TitleHolders';
 
 Vue.use(Router);
 
@@ -9,13 +10,18 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
+      name: 'Home Page',
       component: HomeScreen,
     },
     {
-      path: '/test',
-      name: 'HelloTest',
-      component: HelloTest,
+      path: '/fighter-card',
+      name: 'Fighter Card',
+      component: FighterCard,
+    },
+    {
+      path: '/title-holders',
+      name: 'title holders',
+      component: TitleHolders,
     },
   ],
 });

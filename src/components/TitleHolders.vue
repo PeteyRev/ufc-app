@@ -1,29 +1,44 @@
+
 <template>
   <div>
     <h1>{{ msg }}</h1>
-    <h2>A small app that shows you the latest fighters, fights, and stats</h2>
-    <div class="container">
-		<a href="#" class="button">Current Champions</a>
-		<a href="#" class="button">Search For a Fighter</a>
-		<a href="#" class="button">Current News</a>
-    </div>
+    <h2>A list of current title holders in each division</h2>
+    <div class="container cards-wrapper">
+		<div v-for="fighter in fighters" class=" small-2 columns">
+			<div class="inner" v-bind:data-link="fighter.id">
+				<img v-bind:src="fighter.belt_thumbnail" alt="">
+				<div class="text-inner">
+				<h4>{{fighter.first_name}} {{fighter.last_name}}</h4>
+				<p>{{fighter.weight_class}}</p>
+				<ul>
+					<li>Wins: {{fighter.wins}}</li>
+					<li>Loss: {{fighter.losses}}</li>
+					<li>Draw: {{fighter.draws}}</li>
+				</ul>
+				</div>
+			</div>
+		</div>
+	</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "HomeScreen",
+	name: "TitleHolders",
   data() {
     return {
-      msg: "UFC Fighter Data"
+	  msg: "Title Holders",
+	  fighters: {}
     };
   },
   methods: {
     fetchCharachter() {
-      fetch('http://ufc-data-api.ufc.com/api/v3/us/fighters/500.json', {
+      fetch('http://ufc-data-api.ufc.com/api/v3/us/fighters/title_holders', {
         method: "GET"
       })
-        .then(response => console.log(response.json()))
+		// .then(response => console.log(response.json()))
+		.then(response => response.json())
+        .then(json => (this.fighters = json));
     }
   },
   created() {

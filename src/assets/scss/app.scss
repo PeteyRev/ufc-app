@@ -7,6 +7,21 @@ a{
     text-decoration: none;
 }
 
+.fade-enter-active, .fade-leave-active {
+    transition-property: opacity;
+    transition-duration: .25s;
+  }
+  
+  .fade-enter-active {
+    transition-delay: .25s;
+  }
+  
+  .fade-enter, .fade-leave-active {
+    opacity: 0
+  }
+
+  
+
 #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -14,4 +29,42 @@ a{
     text-align: center;
     color: #2c3e50;
     margin-top: 60px;
+  }
+
+  .home-wrapper{
+      iframe,video{
+          width:500px
+      }
+  }
+
+  .container{
+      max-width: 96rem;
+      margin: 0 auto;
+      overflow: hidden;
+  }
+
+  .cards-wrapper{
+      .inner{
+          padding: .4rem;
+          text-align: center;
+          border:1px solid black;
+      }
+      .text-inner {
+        background: #3a3a3a;
+        color:#ffffff;
+      }
+      img{
+          max-width: 100%;
+      }
+      ul{
+          list-style-type: none;
+          margin:0;
+          padding:0;
+          
+          li{
+              background: #7a8c9e;
+              border:1px solid #ffffff;
+              color:    #ffffff;
+          }
+      }
   }
