@@ -63,6 +63,7 @@ header{
 .container{
     width:$global-width;
     margin:0 auto;
+    overflow: hidden;
 }
 
 ul.main-nav{
@@ -154,4 +155,103 @@ ul.main-nav{
     @include breakpoint('large'){
         @include grid-column(3);
     }
+}
+
+ [data-img="http://imagec.ufc.com/http%253A%252F%252Fmedia.ufc.tv%252Ffeatures%252F019907_WEB_EventPlaceholderRebrand_PPV.jpg?-mw500-mh500-tc1"],
+ [data-img="http://imagec.ufc.com/http%253A%252F%252Fmedia.ufc.tv%252F%252Fcontenderseries%252FUFC_DWTNCS_Logo_Over_Light_RGB.JPG?-mw500-mh500-tc1"],
+ [data-img="http://imagec.ufc.com/http%253A%252F%252Fmedia.ufc.tv%252Features%252F019907_WEB_EventPlaceholderRebrand_PPV.jpg?-mw500-mh500-tc1"],
+ [data-img="http://imagec.ufc.com/http%253A%252F%252Fmedia.ufc.tv%252F%252Fcontenderseries%252FUFC_DWTNCS_Logo_Over_Light_RGB.JPG?-mw500-mh500-tc1"]
+ {
+    display:none;
+} 
+
+.events-wrapper{
+    margin: 1.5rem 0;
+    @include grid-column(12);
+    @include breakpoint('medium'){
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+.event-card{
+    @include grid-column(12);
+    margin-bottom: 1rem;
+    @include breakpoint('large'){
+        @include grid-column(6);
+    }
+    .event{
+        background-color: $color-lightGrey;
+        border-radius: 3px; 
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        overflow: hidden;
+        @include breakpoint('medium'){
+            display: flex;
+        }
+        @include breakpoint('large'){
+            display: block;
+        }
+        @include breakpoint('xlarge'){
+            display: flex;
+            height: 100%;
+        }
+    }
+
+    .event-info{
+        padding:1rem 2rem;
+        @include breakpoint('medium'){
+            @include grid-column(6);
+            padding:0 !important;
+            display:flex;
+            a{
+                margin:0;
+            }
+        }
+        @include breakpoint('large'){
+            @include grid-column(12);
+            padding:2rem !important;
+        }
+        @include breakpoint('xlarge'){
+            @include grid-column(7);
+            padding:0 !important;
+        }  
+    }
+    .inner{
+        align-self: center;
+        width: 100%;
+    }
+    .event-img{
+        @include breakpoint('medium'){
+            @include grid-column(6);
+            padding:0 !important;
+        }
+        @include breakpoint('large'){
+            @include grid-column(12);
+        }
+        @include breakpoint('xlarge'){
+            @include grid-column(6);
+        }  
+    }
+    .half{
+        @include breakpoint('medium'){
+            @include grid-column(6);
+            align-self: center;
+        } 
+    }
+    h2{
+        font-weight: 600;
+        text-decoration: underline;
+        @include breakpoint('medium'){
+            font-size:1.2rem;
+        }
+        @include breakpoint('large'){
+            font-size:1.2rem;
+        }
+    }
+    p.location, p.subtitle{
+        margin-bottom: 0;
+    }
+    p.subtitle,p.date{
+        font-weight: 600;
+    }
+
 }
