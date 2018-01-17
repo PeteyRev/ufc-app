@@ -3,6 +3,8 @@ import Router from 'vue-router';
 import HomeScreen from '@/components/HomeScreen';
 import FighterCard from '@/components/FighterCard';
 import TitleHolders from '@/components/TitleHolders';
+import EventListing from '@/components/EventListing';
+
 
 Vue.use(Router);
 
@@ -20,8 +22,13 @@ export default new Router({
     },
     {
       path: '/title-holders',
-      name: 'title holders',
+      name: 'Title Holders',
       component: TitleHolders,
+    },
+    {
+      path: '/event-listing',
+      name: 'Event Listing',
+      component: EventListing,
     },
   ],
 });

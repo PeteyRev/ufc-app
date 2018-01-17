@@ -3,12 +3,17 @@
   <div>
     <h1>{{ msg }}</h1>
     <h2>A list of current title holders in each division</h2>
-    <div class="container cards-wrapper">
-		<div v-for="fighter in fighters" class=" small-2 columns">
-			<div class="inner" v-bind:data-link="fighter.id">
-				<img v-bind:src="fighter.belt_thumbnail" alt="">
+    <div class="cards-wrapper">
+		<div v-for="fighter in fighters" class="title-holder">
+			<div class="card" v-bind:data-link="fighter.id">
+				<div class="img-inner">
+					<img v-bind:src="fighter.belt_thumbnail" alt="">
+				</div>
+				
 				<div class="text-inner">
-				<h4>{{fighter.first_name}} {{fighter.last_name}}</h4>
+					<div class="header-inner">
+						<h4>{{fighter.first_name}} {{fighter.last_name}}</h4>
+					</div>
 				<p>{{fighter.weight_class}}</p>
 				<ul>
 					<li>Wins: {{fighter.wins}}</li>
@@ -36,8 +41,7 @@ export default {
       fetch('http://ufc-data-api.ufc.com/api/v3/us/fighters/title_holders', {
         method: "GET"
       })
-		// .then(response => console.log(response.json()))
-		.then(response => response.json())
+				.then(response => response.json())
         .then(json => (this.fighters = json));
     }
   },
