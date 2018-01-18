@@ -4,6 +4,7 @@ import HomeScreen from '@/components/HomeScreen';
 import FighterCard from '@/components/FighterCard';
 import TitleHolders from '@/components/TitleHolders';
 import EventListing from '@/components/EventListing';
+import NewsListing from '@/components/NewsListing';
 
 
 Vue.use(Router);
@@ -16,7 +17,7 @@ export default new Router({
       component: HomeScreen,
     },
     {
-      path: '/fighter-card',
+      path: '/fighter/:id',
       name: 'Fighter Card',
       component: FighterCard,
     },
@@ -29,6 +30,11 @@ export default new Router({
       path: '/event-listing',
       name: 'Event Listing',
       component: EventListing,
+    },
+    {
+      path: '/news-listing',
+      name: 'News Listing',
+      component: NewsListing,
     },
   ],
 });

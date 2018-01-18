@@ -16,7 +16,7 @@
                   <h2>{{event.base_title}}</h2>
                   <p class="location">{{event.location}}</p>
                   <p class="arena">{{event.arena}}</p>
-                  <a v-bind:href="event.ticketurl" class="button" target="_blank">Buy Tickets</a>
+                  <!-- <a v-bind:href="event.ticketurl" class="button" target="_blank">Buy Tickets</a> -->
                 </div>
                 <div class="half">
                   <p class="subtitle">{{event.subtitle}}</p>
