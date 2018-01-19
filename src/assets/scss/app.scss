@@ -129,10 +129,13 @@ ul.main-nav {
     }
 
     p {
-      font-size: 14px;
+      font-size: .8rem;
       font-weight: 600;
       padding: 0.5rem;
       margin: 0;
+      @include breakpoint("medium") {
+        font-size: 1rem;
+      }
     }
     ul {
       list-style-type: none;

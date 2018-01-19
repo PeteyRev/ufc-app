@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="main-wrapper">
     <header>
-      <router-link to="/"><img src="./assets/img/ufc-logo.png"></router-link>
+      <router-link to="/"><img src="static/ufc-logo.png"></router-link>
       <ul class="main-nav">
         <li>
           <router-link to="/title-holders" class="button" 
