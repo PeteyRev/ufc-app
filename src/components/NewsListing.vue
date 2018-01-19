@@ -18,17 +18,17 @@
 
 <script>
 export default {
-  name: "NewsListing",
+  name: 'NewsListing',
   data() {
     return {
-      msg: "News",
+      msg: 'News',
       news: {}
     };
   },
   methods: {
     getnewss(id) {
       fetch("http://ufc-data-api.ufc.com/api/v3/us/news", {
-        method: "GET"
+        method: 'GET'
       })
         .then(response => response.json())
         .then(json => (this.news = json));

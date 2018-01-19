@@ -31,24 +31,24 @@
 
 <script>
 export default {
-	name: "TitleHolders",
+  name: 'TitleHolders',
   data() {
     return {
-	  msg: "Title Holders",
-	  fighters: {}
+      msg: 'Title Holders',
+      fighters: {}
     };
   },
   methods: {
     fetchCharachter() {
-      fetch('http://ufc-data-api.ufc.com/api/v3/us/fighters/title_holders', {
+      fetch("http://ufc-data-api.ufc.com/api/v3/us/fighters/title_holders", {
         method: "GET"
       })
-				.then(response => response.json())
+        .then(response => response.json())
         .then(json => (this.fighters = json));
     }
   },
   created() {
-	  this.fetchCharachter();
+    this.fetchCharachter();
   }
 };
 </script>
