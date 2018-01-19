@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     getEvents(id) {
-      fetch("https://ufc-data-api.ufc.com/api/v3/us/events", {
+      fetch("https://cors-anywhere.herokuapp.com/http://ufc-data-api.ufc.com/api/v3/us/events", {
         method: 'GET'
       })
         .then(response => response.json())

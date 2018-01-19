@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     getnewss(id) {
-      fetch("https://ufc-data-api.ufc.com/api/v3/us/news", {
+      fetch("https://cors-anywhere.herokuapp.com/http://ufc-data-api.ufc.com/api/v3/us/news", {
         method: 'GET'
       })
         .then(response => response.json())
