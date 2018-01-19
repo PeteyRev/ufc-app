@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     fetchCharachter() {
-      fetch("https://ufc-data-api.ufc.com/api/v3/us/fighters/title_holders", {
+      fetch("https://cors-anywhere.herokuapp.com/http://ufc-data-api.ufc.com/api/v3/us/fighters/title_holders", {
         method: "GET"
       })
         .then(response => response.json())
