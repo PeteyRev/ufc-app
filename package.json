@@ -4,13 +4,15 @@
   "description": "A Vue.js project",
   "author": "Peter Arevalo <pete.g.arevalo@gmail.com>",
   "private": true,
+  "homepage": "https://github.com/PeteyRev/ufc-app",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "deploy": "node ./node_modules/vue-gh-pages/index.js"
   },
   "dependencies": {
     "moment": "^2.20.1",
@@ -74,6 +76,7 @@
     "sinon-chai": "^2.8.0",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
+    "vue-gh-pages": "^1.8.4",
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
