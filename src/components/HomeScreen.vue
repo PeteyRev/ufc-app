@@ -22,7 +22,7 @@ export default {
   },
   methods: {
     getEvent(id) {
-      fetch("http://ufc-data-api.ufc.com/api/v3/us/events/642991.json", {
+      fetch("https://ufc-data-api.ufc.com/api/v3/us/events/642991.json", {
         method: 'GET'
       })
         .then(response => response.json())

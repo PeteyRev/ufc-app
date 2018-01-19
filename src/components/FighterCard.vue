@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     fetchCharachter(id) {
-      fetch(`http://ufc-data-api.ufc.com/api/v3/us/fighters/${id}.json`, {
+      fetch(`https://ufc-data-api.ufc.com/api/v3/us/fighters/${id}.json`, {
         method: 'GET',
       })
         .then(response => response.json())

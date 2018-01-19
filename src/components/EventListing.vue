@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     getEvents(id) {
-      fetch("http://ufc-data-api.ufc.com/api/v3/us/events", {
+      fetch("https://ufc-data-api.ufc.com/api/v3/us/events", {
         method: 'GET'
       })
         .then(response => response.json())
