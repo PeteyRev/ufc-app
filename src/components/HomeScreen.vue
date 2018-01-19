@@ -13,17 +13,17 @@
 
 <script>
 export default {
-  name: "HomeScreen",
+  name: 'HomeScreen',
   data() {
     return {
-      msg: "UFC Fight Data",
+      msg: 'UFC Fight Data',
       event: {}
     };
   },
   methods: {
     getEvent(id) {
       fetch("http://ufc-data-api.ufc.com/api/v3/us/events/642991.json", {
-        method: "GET"
+        method: 'GET'
       })
         .then(response => response.json())
         .then(json => (this.event = json));
