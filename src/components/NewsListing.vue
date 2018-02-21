@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="loader-icon">
     <h1>{{ msg }}</h1>
     <h2>Current News</h2>
     <div class="news-wrapper">
@@ -35,6 +35,7 @@ export default {
     }
   },
   created() {
+    window.scrollTo(0, 0);
     this.getnewss();
   }
 };

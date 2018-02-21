@@ -5,6 +5,8 @@ import FighterCard from "@/components/FighterCard";
 import TitleHolders from "@/components/TitleHolders";
 import EventListing from "@/components/EventListing";
 import NewsListing from "@/components/NewsListing";
+import EventCard from "@/components/EventCard";
+
 
 Vue.use(Router);
 
@@ -19,6 +21,11 @@ export default new Router({
       path: "/fighter/:id",
       name: "Fighter Card",
       component: FighterCard
+    },
+    {
+      path: "/event/:id",
+      name: "Event Card",
+      component: EventCard
     },
     {
       path: "/title-holders",
@@ -37,3 +44,4 @@ export default new Router({
     }
   ]
 });
+

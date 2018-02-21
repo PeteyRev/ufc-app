@@ -15,6 +15,7 @@
     "deploy": "node ./node_modules/vue-gh-pages/index.js"
   },
   "dependencies": {
+    "lazysizes": "^4.0.1",
     "moment": "^2.20.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
@@ -77,6 +78,7 @@
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
     "vue-gh-pages": "^1.8.4",
+    "vue-lazyload": "^1.2.1",
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",

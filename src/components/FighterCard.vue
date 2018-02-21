@@ -28,6 +28,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'FighterCard',
   data() {
@@ -38,14 +39,23 @@ export default {
   },
   methods: {
     fetchCharachter(id) {
+
       fetch(`https://cors-anywhere.herokuapp.com/http://ufc-data-api.ufc.com/api/v3/us/fighters/${id}.json`, {
         method: 'GET',
       })
         .then(response => response.json())
-        .then(json => (this.fighter = json));
+        .then(json => {
+          let fighterInfo = json;
+          fighterInfo.weight_class = fighterInfo.weight_class.toString().replace('_',' ');
+          this.fighter = fighterInfo;
+
+        });
+
+
     }
   },
   created() {
+    window.scrollTo(0, 0);
     const id = this.$route.params.id;
     this.fetchCharachter(id);
   }

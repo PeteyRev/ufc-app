@@ -41,11 +41,11 @@ body {
 .fade-enter-active,
 .fade-leave-active {
   transition-property: opacity;
-  transition-duration: 0.25s;
+  transition-duration: 0.15s;
 }
 
 .fade-enter-active {
-  transition-delay: 0.25s;
+  transition-delay: 1s;
 }
 
 .fade-enter,
@@ -383,5 +383,12 @@ ul.main-nav {
       color: $color-green;
       float: right;
     }
+  }
+}
+
+
+.event-card-wrapper{
+  .half{
+    @include grid-column(6);
   }
 }
